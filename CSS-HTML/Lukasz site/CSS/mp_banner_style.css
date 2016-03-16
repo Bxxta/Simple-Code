@@ -1,0 +1,276 @@
+/* -----------------------------
+	MP CSS STYLE by Maternicki Patryk
+		contact:sashiumi@gmail.com
+ ----------------------------*/
+
+
+/* -------------------------
+		Animation 
+---------------------------*/
+@keyframes mp_downText
+{
+0% {margin-top:0px;opacity:0;}
+100%  {margin-top:30px;opacity:1;}
+}
+
+@keyframes mp_opacityImage
+{
+0% {opacity:0;}
+100%  {opacity:1;}
+}
+
+@keyframes mp_scaleIcon
+{
+0%  { transform:scale(0.1);} 
+50% { transform:scale(2);}
+100% { transform:scale(1);}
+}
+
+@font-face 
+{
+  font-family: 'Roboto_bold';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+@font-face 
+{
+  font-family: 'Roboto_thin';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v15/2tsd397wLxj96qwHyNIkxPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+
+}
+
+
+		
+#mp_container
+{
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:50px;
+	margin-top:30px;
+}
+
+.mp_opacityImage
+{
+opacity:0;
+}
+.mp_img
+{
+
+text-align:center;
+margin-bottom:0px;
+padding-bottom:0px;
+}
+
+
+
+.mp_js_hidden
+{
+display:none;
+}
+
+
+.mp_text_1
+{
+padding-left:300px;
+text-align:center;
+font-family:Roboto_bold;
+font-size:24px;
+color: #ff9e21;
+margin-bottom:0px;
+}
+.mp_text_2
+{
+text-align:center;
+padding-top:0px;
+margin-top:0px;
+font-family:Roboto_bold;
+font-size:60px;
+color: #262626;
+margin-bottom:0px;
+}
+
+.mp_pad 
+{
+padding-left:33%;
+}
+
+.mp_pad_right
+{
+padding-right:2%;
+}
+.mp_text_3
+{
+display:inline;
+margin-top:0px;
+text-align:center;
+font-family:Roboto_thin;
+font-size:36px;
+color:#6c6c6c;
+}
+
+
+
+
+
+#mp_div1
+{
+width:350px;
+height:500px;
+margin-top:50px;
+padding-left:30%;
+}
+
+
+.mp_icon
+{
+padding-left:40px;
+padding-right:47px;
+}
+
+.mp_icon_2
+{
+padding-left:47px;
+}
+
+
+.js_mp_opacity
+{
+opacity:0;
+}
+
+.js_mp_opacity_off
+{
+opacity:1;
+}
+
+.js_mp_scale
+{
+transform:scale(0.1);
+}
+
+.js_mp_Text_animation
+{
+animation:mp_downText 0.2s linear 1;
+}
+
+.js_mp_image_opacity
+{
+animation:mp_opacityImage 1s linear 1;
+}
+
+.js_mp_AnimationIcon
+{
+animation: mp_scaleIcon 0.6s linear 1;
+}
+.js_mp_opacityTurn
+{
+animation:mp_opacityTurn 1s linear 1;
+}
+
+
+@media all and (max-width:480px)
+/*CSS Ukryty dla monitorów większych niż 480px*/
+{
+	
+    #mp_container
+	{
+        width:360px;
+    }
+	
+	.mp_text_1
+	{
+	font-size:20px;
+	padding-left:230px;
+	}
+	
+	.mp_text_2
+	{
+	font-size:45px;
+	}
+	
+	.mp_text_3
+	{
+	font-size:26px;
+	}
+	
+	.mp_pad
+	{
+	padding-left:60px;
+	}
+	
+	#mp_div1
+	{
+	margin-top:20px;
+	padding-left:0px;
+	}
+	
+	.mp_icon
+	{
+	padding-left:60px;
+	padding-right:10px;
+	}
+	
+	.mp_icon_2
+	{
+	padding-left:10px;
+	}
+}
+
+
+@media all and (orientation:landscape) and (max-height:480px)
+{
+	#mp_container
+	{
+	width:300px;
+	}
+	
+	.mp_img
+	{
+	text-align:center;
+	width:150px;
+	height:150px;
+	margin:auto;
+	}
+	
+	.mp_text_1
+	{
+	font-size:20px;
+	padding-left:240px;
+	}
+	
+	.mp_text_2
+	{
+	font-size:45px;
+	}
+
+	.mp_text_3
+	{
+	font-size:26px;
+	}
+	
+	#mp_div1
+	{
+	margin-top:5px;
+	padding-left:0px;
+	}
+	
+	.mp_icon
+	{
+	width:50px;
+	height:50px;
+	}
+	
+	
+	.mp_pad
+	{
+	padding-left:40px;
+	}
+	
+	
+}
+
+
