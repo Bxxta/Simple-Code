@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+	<html lang = "pl-Pl"/>
+	<head>
+	<meta charset= "UTF-8"/>
+	<link style= "CSS/Style.css" type="stylesheeet"/> 
+	<script type="text/javascript" src="searchCar.js"></script>
+	<title>Przykladowe rozwiazanie z uzyciem klasy</title>
+	</head>
+	<body>
+	<section id="section">
+		<h1> SearchCar </h1>
+		<form id="form" action="" method= "post">
+		<fieldset>
+			<label>Podaj nazwe samochodu:&nbsp <input id="nameTag" type= "text" name="nameTag"/></label>
+			<br>
+			<label>Podaj cenę samochodu:&nbsp  <input id="prize" type="text" name="prize"></label>
+			<br> 
+			<label>Data Dodania samochodu: &nbsp <input id="dateAddCar" type= "text" name="dateAddCar"/></label>
+			<br>
+			<label>Podaj rocznik samochodu : &nbsp <input id="yearCar" type="text" name="yearCar" /></label>
+			<br>
+			<label>Podaj przebieg samochodu: &nbsp <input id="kmCar" type="text" name="kmCar" /></label>
+			<br>
+			<input id="get" type="submit" name="Wyślij"/>
+		</fieldset>
+		</form >
+	</section>
+	<script  type="text/javascript">
+	
+	
+	var form = document.forms[0];
+	form.addEventListener ('submit' , getForm , 'false');
+	
+	function getForm()
+	{
+	if (!String.prototype.trim) {
+	  String.prototype.trim = function () {
+		return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+	  };
+	}
+	var nameTag = form.nameTag.value;
+	nameTag.trim ();
+	var prize = form.prize.value;
+	prize.trim ();
+	var dateAddCar = form.dateAddCar.value;
+	dateAddCar.trim ();
+	var yearCar = form.yearCar.value;
+	yearCar.trim();
+	var kmCar = form.kmCar.value;
+	kmCar.trim();
+	var CarOne = new Car(nameTag,prize,dateAddCar, yearCar, kmCar);
+	var CarTwo = new Car("Audi,350 000 ,1992.02.31, 2, 20 000");
+	var CarThree = new Car("AudiA3",356 000 ,"1994.02.31, 3", 240 000);
+	if (CarOne.validateForm() == false)
+		{
+		alert ("Nie wszystkie okna zostały wypełnione!");
+		}
+	else if (CarOne.validateForm() == true)
+		{
+		createTable();
+		}
+	}
+	
+	
+	function createTable()
+	{
+	window.open("table.html" , "Window" , "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes, height=300, width=600");
+	}
+
+	
+	</script>
+	</body>
+	</html>
